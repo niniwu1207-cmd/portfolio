@@ -1,3 +1,8 @@
+:root {
+  color-scheme: light dark;
+}
+
+
 body {
     font: 100%/1.5 system-ui;
     max-width: 100ch;
@@ -127,4 +132,39 @@ h6 {
     color: white;
     text-decoration: none;
     border-radius: 0.5em;
+}
+
+select {
+  background: var(--color-accent);
+  color: black;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 14px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  display: block;
+  margin-left: auto;
+}
+
+footer {
+  text-align: center;
+  padding: 2em;
+  margin-top: 3em;
+  opacity: 0.7;
+}
+
+#skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+}
+
+#skills-list li {
+  background-color: #f8d7e5;
+  color: #333;
+  padding: 8px 16px;
+  border-radius: 20px;
 }

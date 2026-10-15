@@ -7,31 +7,27 @@
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-    <nav>
-        <a href="../index.html">Home</a>
-        <a href="../projects/">Projects</a>
-        <a href="../contact/" class="current">Contact</a>
-        <a href="../cv/">CV</a>
-    </nav>
+    
     <h1>Contact</h1>
     <p>Feel free to get in touch!</p>
-<form action="mailto:niniwu1207@gmail.com" method="POST" enctype="text/plain">
+<form id="contact-form" action="mailto:niniwu1207@gmail.com" method="POST" enctype="text/plain">
     <label>
         Email:
-        <input type="email" name="email">
+        <input type="email" name="email" required>
     </label>
 
     <label>
         Subject:
-        <input name="subject">
+        <input name="subject" required>
     </label>
 
     <label>
         Message:
-        <textarea name="body"></textarea>
+        <textarea name="body" required></textarea>
     </label>
 
     <button>Submit</button>
 </form>
+<script type="module" src="../global.js"></script>
 </body>
 </html>
