@@ -136,17 +136,18 @@ if (skillsList) {
   }
 }
 
-let contactForm = document.querySelector('#contact-form');
 
-if (contactForm) {
-  contactForm.addEventListener('submit', (event) => {
-    let email = contactForm.elements.email.value;
-    let subject = contactForm.elements.subject.value;
-    let message = contactForm.elements.body.value;
+const form = document.querySelector('#contact-form');
 
-    if (!email || !subject.trim() || !message.trim()) {
-      event.preventDefault();
-      alert('Please fill out all fields! 💗');
-    }
-  });
-}
+form?.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+const data = new FormData(form);
+
+const subject = encodeURIComponent(data.get('subject'));
+const body = encodeURIComponent(data.get('body'));
+
+const url = `${form.action}?subject=${subject}&body=${body}`;
+
+location.href = url;
+});
