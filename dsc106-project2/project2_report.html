@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Project 2 Report</title>
+        <style>
+            :root {
+                --color-neutral-95: hsl(220 10% 95%);
+                --color-neutral-90: hsl(220 10% 90%);
+                --color-neutral-80: hsl(220 10% 80%);
+                --color-neutral-70: hsl(220 10% 70%);
+                --color-neutral-60: hsl(220 10% 60%);
+                --color-neutral-50: hsl(220 10% 50%);
+                --color-neutral-40: hsl(220 10% 40%);
+                --color-neutral-30: hsl(220 10% 30%);
+                --color-neutral-20: hsl(220 10% 20%);
+                --color-neutral-10: hsl(220 10% 10%);
+            }
+
+            html {
+                font: 100%/1.5 system-ui;
+                counter-reset: figure;
+                background: var(--color-neutral-95);
+                max-width: min(75vw, 80em);
+                margin: 0 auto;
+            }
+
+            /* Headings */
+
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+                line-height: 1.1;
+                font-weight: 600;
+                text-wrap: balance;
+            }
+
+            h1,
+            h2 {
+                border-bottom: 1px solid var(--color-neutral-80);
+                padding-bottom: 0.2em;
+            }
+
+            h1 {
+                margin-block: 1em 0.5rem;
+                font-size: clamp(2.5em, 150% + 2vh + 2vw, 10vmin);
+                font-weight: 800;
+
+                small {
+                    display: block;
+                    width: fit-content;
+                    padding: 0.2em 0.5em;
+                    margin-inline: auto;
+                    color: white;
+                    background: var(--color-neutral-40);
+                    font-size: 40%;
+                    text-transform: uppercase;
+                    white-space: nowrap;
+                }
+            }
+
+            h2 {
+                font-size: 180%;
+                color: var(--color-neutral-30);
+            }
+
+            h3 {
+                font-size: 130%;
+            }
+
+            /* Lists */
+
+            ul,
+            ol {
+                padding-inline-start: 2em;
+            }
+
+            li {
+                &::marker {
+                    color: var(--color-neutral-40);
+                }
+
+                + li {
+                    margin-top: 0.2em;
+                }
+            }
+
+            /* Sectioning elements */
+
+            header {
+                padding-block: 1em;
+                text-align: center;
+            }
+
+            main {
+                background: white;
+                color: var(--color-neutral-20);
+                border-radius: 1rem;
+                padding: 0.1rem 2rem;
+            }
+
+            /* Figures */
+
+            figure {
+                margin: 1em 0;
+                padding: 0.5rem;
+                margin-inline: -0.5em;
+                border: 1px solid var(--color-neutral-80);
+                box-shadow: 0 0.1em 0.2em var(--color-neutral-95);
+                text-align: center;
+                background: white;
+
+                > figcaption {
+                    font: 500 75% var(--font-sans);
+                    background: var(--color-neutral-95);
+                    padding: 0.5rem;
+                    margin: -0.5rem;
+                    margin-top: 0.5rem;
+                    counter-increment: figure;
+                    text-align: left;
+
+                    &::before {
+                        content: "Figure " counter(figure) ": ";
+                        font-weight: bold;
+                        color: var(--color-neutral-40);
+                    }
+
+                    a:not(:hover, :focus, :active) {
+                        color: inherit;
+                        text-decoration: underline;
+                        text-decoration-color: color-mix(
+                            in lab,
+                            currentColor,
+                            transparent 70%
+                        );
+                    }
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <h1>
+                <small>Project 2</small>
+                Persuasive or Deceptive Visualization?
+            </h1>
+
+            <p><strong>Yi-Ning Wu, Samuel Yu, Alan Tran</strong> - <em>yiw221@ucsd.edu, say014@ucsd.edu, alt049@ucsd.edu</em></p>
+        </header>
+
+        <main>
+            <h2>Proposition: Renewable energy is becoming dominant in U.S. electricity capacity.</h2>
+
+            <section>
+                <h3>FOR the Proposition</h3>
+
+                <figure>
+                    <img src="supporting.png" alt="Solar and wind capacity growth compared with fossil fuels" />
+                    <figcaption>Solar and wind capacity grew more rapidly than fossil fuel capacity from 2000 to 2023, suggesting that renewable energy is becoming increasingly dominant in U.S. electricity capacity growth.</figcaption>
+                </figure>
+
+                <p>Design Decisions and Rationale:</p>
+
+                <ul>
+                    
+                    <li>We compared net capacity increases from 2000 to 2023 to emphasize how quickly solar and wind energy have expanded relative to fossil fuels.</li>
+                    <li>Bright orange and green bars highlight renewable energy, while the gray fossil fuel bar makes its growth appear less significant.</li>
+                    <li>The persuasive title and 3.04× annotation emphasize renewable growth while omitting the fact that fossil fuels still have a much larger total installed capacity. This selective framing may mislead readers into interpreting faster growth as overall dominance.</li>
+
+                </ul>
+            </section>
+
+            <section>
+                <h3>AGAINST the Proposition</h3>
+
+                <figure>
+                    <img src="opposing.png" alt="Fossil fuels dominate U.S. electricity capacity in 2010 and 2020" />
+                    <figcaption>Despite the rapid expansion of renewable energy, fossil fuels maintained substantially higher installed electricity capacity than solar and wind in both 2010 and 2020.</figcaption>
+                </figure>
+
+                <p>Design Decisions and Rationale:</p>
+
+                <ul>
+                    
+                    <li>We selected data from 2010 and 2020 to emphasize that fossil fuels maintained substantially higher installed electricity capacity than solar and wind, despite the growth of renewables.</li>
+                    <li>We used bright red bars for fossil fuels and gray bars for solar and wind. This color contrast draws attention to fossil fuels and makes renewable energy appear less significant.</li>
+                    <li>The title "Fossil Fuels Still Dominate U.S. Electricity Capacity" and the large fossil fuel bars emphasize total capacity rather than growth. By focusing on absolute capacity and selecting only two years, the visualization downplays the rapid expansion of renewables and creates a misleading impression of continued fossil fuel dominance.</li>
+
+                </ul>
+            </section>
+
+            <section>
+                <h2>Final Reflection</h2>
+
+                
+                <p>This project demonstrates how the same dataset can be used to support two opposing arguments through different visualization choices. Our supporting visualization emphasizes the rapid growth of solar and wind capacity, while our opposing visualization highlights the continued dominance of fossil fuels in total installed capacity. Both charts use accurate data, but their selective framing can lead viewers toward different conclusions.</p>
+
+                <p>We learned that choices such as time periods, colors, titles, and annotations can significantly influence how people interpret data. In particular, comparing capacity growth versus total capacity can create very different impressions of the U.S. energy transition. Although these techniques can make visualizations more persuasive, they also raise ethical concerns when important context is omitted. We believe visualizations should communicate a clear message without misleading viewers, and designers have a responsibility to present data fairly and transparently.</p>
+
+            </section>
+        </main>
+    <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092" integrity="sha512-UKNk8GbxkABxKcXYuLkO16EleLGUkcvJWtpSNmExE0Too3ZaFAxTscNWEc1OdAv5/BikHawapSCaiD2XCmp+Bw==" data-cf-beacon='{"version":"2024.11.0","token":"c822b88e119346678db149ed7b7721c9","r":1,"spa":2}' crossorigin="anonymous"></script>
+</body>
+</html>
