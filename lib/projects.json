@@ -1,21 +1,21 @@
 [
     {
-        "title": "Lorem ipsum dolor sit.",
-        "year": "2023",
+        "title": "DSC 106 Lab 1 - Personal Portfolio Website",
+        "year": "2026",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore impedit unde perspiciatis voluptates aperiam vitae perferendis suscipit accusantium nam, pariatur ipsum tempore, dolor quaerat! Porro reiciendis repellat culpa fugit qui!"
+        "description": "Built a personal portfolio website using HTML, featuring a homepage, projects page, contact page, and CV."
     },
     {
-        "title": "Qui, magnam. Quasi, natus.",
-        "year": "2023",
+        "title": "DSC 106 Lab 2 - Styling with CSS",
+        "year": "2026",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Animi numquam repellat enim dolorem, dolor, ea sit culpa veritatis autem voluptatum minima ipsum doloremque excepturi itaque harum fugit facere cum similique. Dolorum sapiente hic soluta velit similique. At, veniam!"
+        "description": "Styled my portfolio website using CSS, including responsive layouts, navigation, and a personalized pink theme."
     },
     {
-        "title": "Neque libero obcaecati ipsum.",
-        "year": "2023",
+        "title": "DSC 106 Project 2 - U.S. Renewable Energy Transition",
+        "year": "2026",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Est repellendus qui sit incidunt voluptate aspernatur laborum saepe rerum! Ad iure sint hic perferendis consectetur quo! Incidunt et nobis officia molestiae sit at officiis, impedit possimus, eum, eos itaque."
+        "description": "Created data visualizations exploring the U.S. renewable energy transition, using different visual framing techniques to communicate contrasting perspectives."
     },
     {
         "title": "Culpa repellat eos aut.",
